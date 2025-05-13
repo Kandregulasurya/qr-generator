@@ -1,0 +1,117 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    background-image: url(https://res.cloudinary.com/dhrlnjori/image/upload/v1747144880/Bgimg.jpg);   
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    backdrop-filter: blur(10px);
+}
+.main , .box{
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+}
+.box{
+    width: 330px;
+    height: auto;
+    backdrop-filter: blur(30px);
+    border: 3px solid cyan;
+    box-shadow: 0px 0px 15px cyan,
+    0px 0px 10px cyan inset;
+}
+.title{
+    color: #CBE4DE;        
+    height: 50px;
+    width: 300px;
+    margin: 20px;
+    text-align : center;
+}
+#text{
+    height: 40px;
+    width:250px;
+    border: 2px solid #a9f6f6;
+    padding: 5px;
+    margin-bottom: 20px;
+    outline: 0;
+}
+#text::placeholder{
+    text-align: center;
+    color: #2E4F4F;
+}
+.btn{
+    height:40px;
+    width: auto;
+    padding: 10px;
+    border-radius: 15px;
+    margin-bottom: 20px;
+    border:2px solid #2E4F4F;
+    outline: 0;
+}
+.btn:active{
+    border:2px solid #1e3434;
+    box-shadow: 0px 0px 15px #1e3434,0px 0px 15px #1e3434 inset;
+}  
+#imgtag{
+    width: 150px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    height:150px;
+    border: 3px solid black;
+}
+#imgtag , .box{
+    animation: fade 1s ease-in-out;
+    /* animation: pop 2s ease-in-out; */
+}
+@keyframes fade{
+    from{
+        opacity: 0;
+        transform: translateY(-15px);
+    }
+    to{
+         opacity: 1;
+        transform: translateY(0);
+    }
+}
+/* @keyframes pop{
+    from{
+        opacity: 0;
+        transform: scale(0.5);
+    }
+    to{
+         opacity: 1;
+        transform: scale(1);
+    }
+} */
+.error{
+    animation: shake 0.1s linear 10;
+}
+@keyframes shake{
+    0%{
+        transform: translateX(0);
+        border: 2px solid red;
+    }
+    25%{
+        transform: translateX(-2px);
+        border: 2px solid red;
+    }
+    50%{
+        transform: translateX(0);
+        border: 2px solid red;
+    }
+    75%{
+        transform: translateX(2px);
+        border: 2px solid red;
+    }
+    100%{
+        transform: translateX(0);
+        border: 2px solid red;
+    }
+}
